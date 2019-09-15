@@ -18,14 +18,6 @@ class App extends React.Component {
   }
 
   handleSubmit = async (searchTerm) => {
-    // const response = await youtube.get('search', {
-    //   params: {
-    //     part: 'snippet',
-    //     maxResults: 5,
-    //     key: API_KEY,
-    //     q: searchTerm
-    //   }});
-
     const response = await axios('/.netlify/functions/youtube', {
       params: {
         part: 'snippet',
